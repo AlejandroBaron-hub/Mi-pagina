@@ -1,50 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap');
+
 body {
-  font-family: Arial, sans-serif;
-  background: #f3f3f3;
+  font-family: 'Roboto', sans-serif;
+  background: linear-gradient(135deg, #74ebd5, #ACB6E5);
+  margin: 0;
+  padding: 0;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .form-container {
   background: white;
-  padding: 30px;
-  border-radius: 10px;
-  width: 350px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  padding: 40px;
+  border-radius: 15px;
+  width: 90%;
+  max-width: 400px;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 h2 {
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
+  color: #333;
+  font-weight: 500;
 }
 
 form label {
   display: block;
-  margin-top: 10px;
+  margin-top: 15px;
+  color: #555;
+  font-size: 14px;
 }
 
-form input, form textarea {
+form input,
+form textarea {
   width: 100%;
-  padding: 10px;
-  margin-top: 5px;
+  padding: 12px;
+  margin-top: 6px;
   border: 1px solid #ccc;
-  border-radius: 5px;
+  border-radius: 8px;
+  font-size: 14px;
+  transition: border-color 0.3s;
+}
+
+form input:focus,
+form textarea:focus {
+  border-color: #4285f4;
+  outline: none;
 }
 
 form button {
-  margin-top: 15px;
+  margin-top: 20px;
   width: 100%;
-  padding: 10px;
+  padding: 12px;
   background-color: #4285f4;
   color: white;
   border: none;
-  border-radius: 5px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
   cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
 }
 
 form button:hover {
-  background-color: #357ae8;
+  background-color: #2f69d9;
+  transform: scale(1.02);
 }
-
